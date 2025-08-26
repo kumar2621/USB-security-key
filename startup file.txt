@@ -1,0 +1,3 @@
+@echo off
+start "" "C:\Users\kumar\PyCharmMiscProject\.venv\Scripts\pythonw.exe" "C:\path of python file\usb_security_key.py"
+exit

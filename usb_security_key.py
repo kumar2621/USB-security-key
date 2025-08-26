@@ -4,7 +4,7 @@ import os
 
 # --- CONFIG ---
 AUTHORIZED_SERIAL = "CEF3-1656"   # your USB serial (from `vol D:`)
-KILL_SWITCH = r"C:\Users\kumar\Desktop\1.txt"  # if this file exists, script exits
+KILL_SWITCH = r"C:\Users\YourUsername\Desktop\1.txt"  # if this file exists, script exits
 
 # Windows API
 kernel32 = ctypes.windll.kernel32
@@ -100,4 +100,5 @@ def main():
 
 if __name__ == "__main__":
     main()
+
 

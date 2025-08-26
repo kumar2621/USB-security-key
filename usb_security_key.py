@@ -1,48 +1,3 @@
-# import subprocess
-# import ctypes
-# import time
-#
-# # Your USB details
-# AUTHORIZED_SERIAL = "CEF3-1656"   # exact as seen from 'vol D:'
-# DRIVE_LETTER = "D:"              # your USB drive letter
-#
-# def get_serial(drive):
-#     """
-#     Get the Volume Serial Number using 'vol'.
-#     """
-#     try:
-#         result = subprocess.check_output(f"vol {drive}", shell=True, text=True)
-#         for line in result.splitlines():
-#             if "Serial Number" in line:
-#                 return line.split()[-1].strip()
-#     except Exception as e:
-#         print("DEBUG ERROR:", e)
-#     return None
-#
-# def lock_screen():
-#     """
-#     Lock the Windows workstation.
-#     """
-#     ctypes.windll.user32.LockWorkStation()
-#
-# def main():
-#     print("🔑 USB Guard started. Monitoring...")
-#     while True:
-#         serial = get_serial(DRIVE_LETTER)
-#         print(f"DEBUG: Found serial = {serial}")  # Debug log
-#
-#         if serial != AUTHORIZED_SERIAL:
-#             print("❌ USB removed or wrong key! Locking system...")
-#             lock_screen()
-#             # Don’t exit — keep looping forever
-#         else:
-#             print("✅ USB present, access granted")
-#
-#         time.sleep(3)  # check every 3 seconds
-#
-# if __name__ == "__main__":
-#     main()
-#
 import ctypes
 import time
 import os
@@ -145,3 +100,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
